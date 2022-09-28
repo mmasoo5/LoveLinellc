@@ -7,6 +7,21 @@ body {
     margin-left: 20px;
   }
 
-#main section{
- align-items: flex-end;
+
+section.fixed{
+  text-align: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  border: 6px solid black;
 }
+
+
+a{
+  color: white;
+}
+
+#parent { white-space: nowrap; }
+
+.main_mini { display: inline-block; }
