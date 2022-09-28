@@ -8,8 +8,5 @@ body {
   }
 
 #main section{
-    flex: 1;
-    border: 1px solid green;
-    display: flex;
-    align-items: center;
+ align-items: flex-end;
 }
