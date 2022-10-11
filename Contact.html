@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+  First name:<br>
+  <input type="text" id="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" id="lastname" value="Mouse"><br>
+  City:<br>
+  <input type="text" id="city" value="Mouseville"><br>
+  Email:<br>
+  <input type="text" id="email" value="mm@rodentia.com"><br><br>
+  <button onclick = "arrayStuff();">submit</button>
+</div> 
+
+<p id="id">If you click the "Submit" button, the input data will be added to the JavaScript array</p>
+
+<div id="div1">
+</div>
+
+<script>
+
+var profile1 = {name: "", city: "", email: ""}
+var profile2 = {name: "", city: "", email: ""}
+var profile3 = {name: "", city: "", email: ""}
+var profile4 = {name: "", city: "", email: ""}
+
+var data = [profile1, profile2, profile3, profile4]
+
+function arrayStuff()
+{
+  buildArray();
+  getElement();
+  addElement(profile);
+  showArray();
+}
+
+function buildArray() {
+array = [profile1, profile2, profile3, profile4];
+}
+
+function addElement(para) {
+	for(var index = 0; index < array.length; index++)
+{
+  if(para.email == array[index].email) {return;}
+  }
+array.push(para);
+}
+
+function getElement() {
+	profile = {name: document.getElementById("firstname").value+" "+document.getElementById("lastname").value, city: document.getElementById("city").value, email: document.getElementById("email").value};
+document.getElementById("id").innerHTML="";
+}
+
+function showArray()
+{
+  document.getElementById("div1").innerHTML="results:";
+  var array2 = [array.length];
+  for(var index=0; index<array.length; index++)
+  {
+    array2[index] = document.createElement("P");
+    var text = array[index].name+' '+array[index].city+' '+array[index].email;
+    var textnode = document.createTextNode(text);
+    array2[index].appendChild(textnode);
+    document.getElementById("div1").appendChild(array2[index]);
+  }
+}
+
+</script>
+
+</body>
+</html>
+
+
