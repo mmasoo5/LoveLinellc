@@ -1,0 +1,43 @@
+body {
+    background-color: goldenrod;
+  }
+  
+  h1 {
+    color: white;
+    margin-left: 20px;
+  }
+
+
+
+section.fixed{
+  text-align: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+}
+
+
+a{
+  color: white;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+#parent { white-space: nowrap; }
+
+.main_mini { display: inline-block; }
